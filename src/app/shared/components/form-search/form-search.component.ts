@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
     (keyup)="onSearch(inputSearch.value)"
     />
     `,
-  styles: ['input {width:100%; background-color: white;}'],
+  styles: ['input {width:100%; font-size: 1.4rem; background-color: white;}'],
 })
 export class FormSearchComponent implements OnInit {
   constructor(private router:Router){}

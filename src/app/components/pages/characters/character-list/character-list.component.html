@@ -19,11 +19,13 @@
 
 
 <div>
-<div *ngIf="showPagination" class="Pag">
-  <p><b>Página</b> {{ page }} de 42</p>
+<div *ngIf="showPagination" >
+  <p class="num-pag"><b>Página</b> {{ page }} de 42</p>
+  <div class="pag">
   <button (click)="previousPage()" [disabled]="page === 1">Anterior</button>
   <button (click)="nextPage()" [disabled]="page === 42">Siguiente</button>
 </div>
 </div>
-  <button *ngIf="showButton" (click)="onScrollTop()" class="btn">   🔝  </button>
+</div>
+  <button *ngIf="showButton" (click)="onScrollTop()" class="btn-up">   ↟  </button>
 

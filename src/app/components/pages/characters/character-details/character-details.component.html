@@ -1,21 +1,20 @@
-  <div class="row" >
-    <div class="col-left " *ngIf="character$ | async as character">
-        <div class="card">
+      <div class="content " *ngIf="character$ | async as character">
+        <div class="card-detail">
           <div class="image">
                 <img [src]="character.image" [alt]="character.name" class="card-img-top"/>
             </div>
             <div class="card-inner">
-                <h5><b>Name:</b>{{character.name}}</h5>
-                <p class="text-card"><b>Specie:</b>{{character.species}}</p>
-                <p class="text-card"><b>Gender:</b>{{character.gender}}</p>
-                <p class="text-card"><b>Status:</b>{{character.status}}</p>
-                <p class="text-card"><b>Created:</b>{{character.created | date}}</p>
+                <h3><b>Name:</b>{{character.name}}</h3>
+                <p class="text-card"><b><br>Specie:</b>{{character.species}}</p>
+                <p class="text-card"><b><br>Gender:</b>{{character.gender}}<br></p>
+                <p class="text-card"><b><br>Status:</b>{{character.status}}<br></p>
+                <p class="text-card"><b><br>Created:</b>{{character.created | date}}<br></p>
             </div>
         </div>
     </div>
-  </div>
+
   <h4> Episodes in which the character appears</h4>
-  <div class="col-rigth" *ngFor="let episode of episodes$ | async">
+  <div class="row" *ngFor="let episode of episodes$ | async">
     <a [routerLink]="['/character-episodes',episode.id]">
       <ul>
         <li >
@@ -24,7 +23,6 @@
       </ul>
       </a>
   </div>
-
 
 <button (click)="onGoBack()" class="btn btn-primary btn-lg mt-3">
   ↞

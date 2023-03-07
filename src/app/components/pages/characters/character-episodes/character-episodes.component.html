@@ -1,8 +1,8 @@
 <h2>Episode details</h2>
-<div class="row  " *ngIf="episodes$ | async as episode">
-  <div class="col-xs-12 col-sm-6 col-md-4">
-    <div class="card-detail">
-    <div class="card-inner">
+<div  *ngIf="episodes$ | async as episode">
+  <div >
+    <div class="card-episode">
+    <div class="card-episo">
           <h4><b>Name:<br></b>{{episode.name}}</h4>
           <p class="text"><b><br>Episode:</b><br>{{episode.episode}}</p>
           <p class="text"><b><br>Id episode:<br></b>{{episode.id}}</p>
