@@ -1,1 +1,17 @@
-<p>character-episodes works!</p>
+<h2>Episode details</h2>
+<div class="row  " *ngIf="episodes$ | async as episode">
+  <div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="card-detail">
+    <div class="card-inner">
+          <h4><b>Name:<br></b>{{episode.name}}</h4>
+          <p class="text"><b><br>Episode:</b><br>{{episode.episode}}</p>
+          <p class="text"><b><br>Id episode:<br></b>{{episode.id}}</p>
+          <p class="text"><br><b>Air date:<br></b>{{episode.air_date | date}}</p>
+          <p class="text"><br><b>Created:</b><br>{{episode.created | date}}</p>
+      </div>
+  </div>
+</div>
+</div>
+<button (click)="onGoBack()" class="btn btn-primary btn-lg mt-3">
+  ↞
+</button>
