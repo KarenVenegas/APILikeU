@@ -20,8 +20,7 @@ export class CharacterService {
     return this.http.get<Character[]>(filter);
     }
 
-
-  /* Recuperar detail Luego de click */
+  /* Recupera detalles luego de click */
   getDetails(id:number){
     return this.http.get<Character>(`${environment.baseUrlAPI}/character/${id}`);
     }
@@ -48,14 +47,10 @@ export class CharacterService {
         })
     );
   }
-
   /*Detalles episodio*/
   getDetailsEpisode(id:number){
     return this.http.get<Episodes>(`${environment.baseUrlAPI}/episode/${id}`);
     }
-
-
-
 }
 
 
