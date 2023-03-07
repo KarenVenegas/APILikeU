@@ -13,3 +13,6 @@ El proyecto fue generado con Angular CLI, se usa para consumir la API de Rick an
 - Node: 18.14.0
 - Package Manager: npm 9.5.1
 - Conexión a internet para consumir la API.
+
+#URL Firebase 
+https://gdi-likeu.web.app/home
